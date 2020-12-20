@@ -22,9 +22,11 @@ class WeatherInfoViewModelTests: XCTestCase, WeatherInfoDataReloadDelegate {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.weatherinfoVM = nil
+        self.expectationWeather = nil
     }
 
-    func testgetWeatherDetailsAPI() throws {
+    func testToCheckWeatherDetailsAPIResponse() throws {
         self.expectationWeather = self.expectation(
           description: "Get City Weather Details")
         

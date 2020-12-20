@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,6 +49,7 @@
                                 <connections>
                                     <outlet property="cityNameLabel" destination="dNY-fW-8ZY" id="Ydp-g3-hk5"/>
                                     <outlet property="templabel" destination="9ow-nV-hyM" id="VWO-hd-1QW"/>
+                                    <segue destination="F3T-cU-dqb" kind="show" identifier="DetailInfoSegue" id="VLX-Mb-xS1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,6 +78,65 @@
             </objects>
             <point key="canvasLocation" x="437.68115942028987" y="-591.29464285714278"/>
         </scene>
+        <!--Detail Info WeatherVC-->
+        <scene sceneID="TUE-YU-3YU">
+            <objects>
+                <tableViewController id="F3T-cU-dqb" customClass="DetailInfoWeatherVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WOF-Tr-33I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="70" id="zET-WS-CP2" customClass="DetailInfoTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.5" width="374" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zET-WS-CP2" id="4Iu-JT-Cyl">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S55-9p-I4r">
+                                            <rect key="frame" x="10" y="25" width="56.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-7k-QhR">
+                                            <rect key="frame" x="346" y="25" width="18" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Acb-7k-QhR" secondAttribute="trailing" constant="10" id="Rh3-IX-9aC"/>
+                                        <constraint firstItem="Acb-7k-QhR" firstAttribute="centerY" secondItem="4Iu-JT-Cyl" secondAttribute="centerY" id="egB-Ee-bCC"/>
+                                        <constraint firstItem="S55-9p-I4r" firstAttribute="centerY" secondItem="4Iu-JT-Cyl" secondAttribute="centerY" id="s8T-HK-f8K"/>
+                                        <constraint firstItem="S55-9p-I4r" firstAttribute="leading" secondItem="4Iu-JT-Cyl" secondAttribute="leading" constant="10" id="ukQ-Jq-CS6"/>
+                                        <constraint firstItem="Acb-7k-QhR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S55-9p-I4r" secondAttribute="trailing" constant="8" symbolic="YES" id="vy7-AA-B99"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="KeyDesription" destination="Acb-7k-QhR" id="oJf-b4-Tqa"/>
+                                    <outlet property="keyText" destination="S55-9p-I4r" id="0NO-dK-7mD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F3T-cU-dqb" id="EV6-zL-q5c"/>
+                            <outlet property="delegate" destination="F3T-cU-dqb" id="OiP-vB-Zw5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pRo-LL-BRZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2J-Pd-dEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vsI-sa-Inr">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </objects>
+            <point key="canvasLocation" x="1297" y="-591"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hfd-hk-MKY">
             <objects>
@@ -95,4 +156,9 @@
             <point key="canvasLocation" x="-1132" y="-591"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -51,13 +51,29 @@ class WeatherInfoTableVC: UITableViewController {
     }
     
     // MARK: - Table view Delegate Methods
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
-
+    // MARK: - Segue Method
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailInfoSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow{
+                guard let detailController = segue.destination as? DetailInfoWeatherVC else { return }
+                if (detailController.detailInfoViewModel == nil) {
+                    detailController.detailInfoViewModel = DetailInfoViewModel()
+                }
+                
+                if let list = self.weatherInfoViewModel.cities?.list[indexPath.row] {
+                    detailController.detailInfoViewModel.cityList = list
+                }
+            }
+        }
+    }
 }
+
 // MARK: - WeatherInfoDataReloadDelegate Methods
 
 extension WeatherInfoTableVC: WeatherInfoDataReloadDelegate {
