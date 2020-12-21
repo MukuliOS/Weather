@@ -37,6 +37,10 @@ class WeatherInfoViewModel : NSObject {
         }
     }
     
+    func resetData() {
+        self.cities = nil
+    }
+    
     func addCityId(cityId:String) {
         cityIdArray.append(cityId)
     }

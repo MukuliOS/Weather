@@ -32,6 +32,8 @@ class WeatherInfoTableVC: UITableViewController {
     // MARK: - refresh Action
     
     @IBAction func refreshPage(sender: UIBarButtonItem) {
+        self.weatherInfoViewModel.resetData()
+        self.tableView.reloadData()
         self.callToViewModelForUIUpdate()
     }
     
