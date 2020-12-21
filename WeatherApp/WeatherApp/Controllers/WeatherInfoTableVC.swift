@@ -16,7 +16,7 @@ class WeatherInfoTableVC: UITableViewController {
         super.viewDidLoad()
         self.title = "Cities"
         self.refreshControl?.addTarget(self, action: #selector(refreshPage), for: UIControl.Event.valueChanged)
-        activityIndicatorView = UIActivityIndicatorView(style: .large)
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .large)
         tableView.backgroundView = activityIndicatorView
         self.weatherInfoViewModel =  WeatherInfoViewModel()
         self.callToViewModelForUIUpdate()
