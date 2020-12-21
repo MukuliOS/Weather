@@ -61,7 +61,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="a7l-wu-nSh">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Nh5-tw-29n"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Nh5-tw-29n">
+                            <connections>
+                                <segue destination="xlz-us-BpR" kind="presentation" identifier="AddLocationSegueIdentifier" id="rBa-iZ-3bn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="9tE-8T-CtH">
                             <connections>
                                 <action selector="refreshPageWithSender:" destination="eoS-PP-jxs" id="9R2-b6-rom"/>
@@ -154,6 +158,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nb-LH-sGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1132" y="-591"/>
+        </scene>
+        <!--Add Location TableVC-->
+        <scene sceneID="pCZ-Hy-r6d">
+            <objects>
+                <tableViewController id="ScN-jA-Lsk" customClass="AddLocationTableVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qz0-LJ-efY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="TWD-eB-Mll" customClass="AddLocationTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TWD-eB-Mll" id="Iad-8X-mo8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-nj-mZ3">
+                                            <rect key="frame" x="10" y="11" width="64" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-LO-J2R">
+                                            <rect key="frame" x="374" y="-0.5" width="30" height="44.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="didTapLocationButton:" destination="ScN-jA-Lsk" eventType="touchUpInside" id="a1S-KL-nEG"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ddj-nj-mZ3" firstAttribute="leading" secondItem="Iad-8X-mo8" secondAttribute="leading" constant="10" id="Dgx-yj-J66"/>
+                                        <constraint firstAttribute="trailing" secondItem="cj8-LO-J2R" secondAttribute="trailing" constant="10" id="I9h-wi-BzV"/>
+                                        <constraint firstItem="cj8-LO-J2R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ddj-nj-mZ3" secondAttribute="trailing" constant="8" symbolic="YES" id="QaR-9t-bxk"/>
+                                        <constraint firstItem="cj8-LO-J2R" firstAttribute="centerY" secondItem="Iad-8X-mo8" secondAttribute="centerY" id="iXd-Fk-SXx"/>
+                                        <constraint firstItem="ddj-nj-mZ3" firstAttribute="centerY" secondItem="Iad-8X-mo8" secondAttribute="centerY" id="kdC-3W-GDv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addLocationBtn" destination="cj8-LO-J2R" id="WQn-ZT-cCa"/>
+                                    <outlet property="locationName" destination="ddj-nj-mZ3" id="Rvn-PG-gaZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ScN-jA-Lsk" id="gm4-ER-2sU"/>
+                            <outlet property="delegate" destination="ScN-jA-Lsk" id="ohr-8k-aFF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SWk-yJ-q0X">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mfG-pm-ZaV">
+                            <connections>
+                                <action selector="cancelWithSender:" destination="ScN-jA-Lsk" id="22E-1W-VDK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfW-X6-3eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660.8695652173915" y="178.79464285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FE6-b9-jIZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xlz-us-BpR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vbo-Ux-Vqp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ScN-jA-Lsk" kind="relationship" relationship="rootViewController" id="SNK-KC-bWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlR-U7-6hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750.72463768115949" y="178.79464285714286"/>
         </scene>
     </scenes>
     <resources>

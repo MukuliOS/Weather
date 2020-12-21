@@ -1,0 +1,397 @@
+{
+    "cnt": 10,
+    "list": [
+        {
+            "coord": {
+                "lon": -0.13,
+                "lat": 50.96
+            },
+            "sys": {
+                "country": "GB",
+                "timezone": 0,
+                "sunrise": 1608278375,
+                "sunset": 1608306903
+            },
+            "weather": [
+                {
+                    "id": 803,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "04d"
+                }
+            ],
+            "main": {
+                "temp": 283.81,
+                "feels_like": 276.88,
+                "temp_min": 283.15,
+                "temp_max": 284.26,
+                "pressure": 1014,
+                "humidity": 93
+            },
+            "visibility": 6000,
+            "wind": {
+                "speed": 9.8,
+                "deg": 200
+            },
+            "clouds": {
+                "all": 75
+            },
+            "dt": 1608282578,
+            "id": 2654308,
+            "name": "Burgess Hill"
+        },
+        {
+            "coord": {
+                "lon": -1.64,
+                "lat": 51.81
+            },
+            "sys": {
+                "country": "GB",
+                "timezone": 0,
+                "sunrise": 1608278995,
+                "sunset": 1608307008
+            },
+            "weather": [
+                {
+                    "id": 803,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "04d"
+                }
+            ],
+            "main": {
+                "temp": 284.83,
+                "feels_like": 279.73,
+                "temp_min": 284.26,
+                "temp_max": 285.15,
+                "pressure": 1008,
+                "humidity": 87
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 7.2,
+                "deg": 190
+            },
+            "clouds": {
+                "all": 75
+            },
+            "dt": 1608282416,
+            "id": 2654312,
+            "name": "Burford"
+        },
+        {
+            "coord": {
+                "lon": -1.67,
+                "lat": 51.35
+            },
+            "sys": {
+                "country": "GB",
+                "timezone": 0,
+                "sunrise": 1608278861,
+                "sunset": 1608307156
+            },
+            "weather": [
+                {
+                    "id": 300,
+                    "main": "Drizzle",
+                    "description": "light intensity drizzle",
+                    "icon": "09d"
+                }
+            ],
+            "main": {
+                "temp": 284.4,
+                "feels_like": 277.24,
+                "temp_min": 284.15,
+                "temp_max": 284.82,
+                "pressure": 1010,
+                "humidity": 100
+            },
+            "visibility": 3500,
+            "wind": {
+                "speed": 10.8,
+                "deg": 190
+            },
+            "clouds": {
+                "all": 90
+            },
+            "dt": 1608282414,
+            "id": 2654320,
+            "name": "Burbage"
+        },
+        {
+            "coord": {
+                "lon": 8.47,
+                "lat": 48.95
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608275747,
+                "sunset": 1608305401
+            },
+            "weather": [
+                {
+                    "id": 741,
+                    "main": "Fog",
+                    "description": "fog",
+                    "icon": "50d"
+                }
+            ],
+            "main": {
+                "temp": 273.94,
+                "feels_like": 271.18,
+                "temp_min": 273.15,
+                "temp_max": 274.26,
+                "pressure": 1025,
+                "humidity": 91
+            },
+            "visibility": 450,
+            "wind": {
+                "speed": 1,
+                "deg": 0
+            },
+            "clouds": {
+                "all": 90
+            },
+            "dt": 1608278860,
+            "id": 3206178,
+            "name": "Grun"
+        },
+        {
+            "coord": {
+                "lon": 9.98,
+                "lat": 48.12
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608275168,
+                "sunset": 1608305255
+            },
+            "weather": [
+                {
+                    "id": 741,
+                    "main": "Fog",
+                    "description": "fog",
+                    "icon": "50d"
+                }
+            ],
+            "main": {
+                "temp": 276.37,
+                "feels_like": 274.56,
+                "temp_min": 276.15,
+                "temp_max": 276.48,
+                "pressure": 1025,
+                "humidity": 100
+            },
+            "visibility": 100,
+            "wind": {
+                "speed": 0.5,
+                "deg": 340
+            },
+            "clouds": {
+                "all": 75
+            },
+            "dt": 1608279148,
+            "id": 3206180,
+            "name": "Gutenzell-Hürbel"
+        },
+        {
+            "coord": {
+                "lon": 7.65,
+                "lat": 47.58
+            },
+            "sys": {
+                "country": "CH",
+                "timezone": 3600,
+                "sunrise": 1608275592,
+                "sunset": 1608305950
+            },
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "main": {
+                "temp": 278.01,
+                "feels_like": 274.84,
+                "temp_min": 277.04,
+                "temp_max": 278.71,
+                "pressure": 1025,
+                "humidity": 93
+            },
+            "visibility": 8000,
+            "wind": {
+                "speed": 2.6,
+                "deg": 170
+            },
+            "clouds": {
+                "all": 40
+            },
+            "dt": 1608278940,
+            "id": 3206590,
+            "name": "Riehen"
+        },
+        {
+            "coord": {
+                "lon": 13.73,
+                "lat": 48.62
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608274397,
+                "sunset": 1608304225
+            },
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "main": {
+                "temp": 273.58,
+                "feels_like": 270.95,
+                "temp_min": 272.04,
+                "temp_max": 275.37,
+                "pressure": 1028,
+                "sea_level": 1028,
+                "grnd_level": 943,
+                "humidity": 92
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 0.77,
+                "deg": 121
+            },
+            "clouds": {
+                "all": 31
+            },
+            "dt": 1608278860,
+            "id": 3206680,
+            "name": "Kropfmühl"
+        },
+        {
+            "coord": {
+                "lon": 11.02,
+                "lat": 49.8
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608275366,
+                "sunset": 1608304558
+            },
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "main": {
+                "temp": 275.82,
+                "feels_like": 272.99,
+                "temp_min": 274.82,
+                "temp_max": 276.48,
+                "pressure": 600,
+                "humidity": 97
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 1.71,
+                "deg": 139
+            },
+            "clouds": {
+                "all": 39
+            },
+            "dt": 1608278860,
+            "id": 3206785,
+            "name": "Altendorf"
+        },
+        {
+            "coord": {
+                "lon": 11.06,
+                "lat": 49.66
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608275317,
+                "sunset": 1608304587
+            },
+            "weather": [
+                {
+                    "id": 741,
+                    "main": "Fog",
+                    "description": "fog",
+                    "icon": "50d"
+                }
+            ],
+            "main": {
+                "temp": 274.14,
+                "feels_like": 269.98,
+                "temp_min": 273.15,
+                "temp_max": 274.82,
+                "pressure": 1026,
+                "humidity": 93
+            },
+            "visibility": 200,
+            "wind": {
+                "speed": 3.1,
+                "deg": 100
+            },
+            "clouds": {
+                "all": 90
+            },
+            "dt": 1608278860,
+            "id": 3206906,
+            "name": "Hagenau"
+        },
+        {
+            "coord": {
+                "lon": 10.7,
+                "lat": 49.15
+            },
+            "sys": {
+                "country": "DE",
+                "timezone": 3600,
+                "sunrise": 1608275265,
+                "sunset": 1608304812
+            },
+            "weather": [
+                {
+                    "id": 741,
+                    "main": "Fog",
+                    "description": "fog",
+                    "icon": "50d"
+                }
+            ],
+            "main": {
+                "temp": 274.63,
+                "feels_like": 271.27,
+                "temp_min": 273.15,
+                "temp_max": 275.93,
+                "pressure": 1025,
+                "humidity": 94
+            },
+            "visibility": 722,
+            "wind": {
+                "speed": 2.1,
+                "deg": 110
+            },
+            "clouds": {
+                "all": 90
+            },
+            "dt": 1608279148,
+            "id": 3206926,
+            "name": "Muhr am See"
+        }
+    ]
+}

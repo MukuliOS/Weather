@@ -51,9 +51,9 @@ class WeatherInfoTableVC: UITableViewController {
     }
     
     // MARK: - Table view Delegate Methods
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: - Segue Method
@@ -71,9 +71,28 @@ class WeatherInfoTableVC: UITableViewController {
                 }
             }
         }
+        if segue.identifier == "AddLocationSegueIdentifier" {
+            if let destinationNavigationController = segue.destination as? UINavigationController {
+                let addLocationVC = destinationNavigationController.topViewController as? AddLocationTableVC
+                addLocationVC?.delegate = self
+            }
+        }
     }
 }
 
+extension WeatherInfoTableVC: AddWeatherDelegate {
+    func addLocation(location:String) ->Bool {
+        if weatherInfoViewModel.cityIdArray.contains(location) {
+            return false
+        }
+        else {
+            weatherInfoViewModel.addCityId(cityId:location)
+            self.callToViewModelForUIUpdate()
+            return true
+        }
+    }
+
+}
 // MARK: - WeatherInfoDataReloadDelegate Methods
 
 extension WeatherInfoTableVC: WeatherInfoDataReloadDelegate {
