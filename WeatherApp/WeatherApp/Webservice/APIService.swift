@@ -19,7 +19,7 @@ public enum Result<Success, Failure: Error> {
 
 class APIService :  NSObject {
     
-    func apiToGetCityWeatherData(stringURL:String,completion:@escaping (Result<Cities?, URLError>)->Void)  {
+    func apiToGetCityWeatherData(stringURL:String,completion:@escaping (Result<Cities?, Error>)->Void)  {
         let sourcesURL = URL(string:stringURL)!
         URLSession.shared.dataTask(with: sourcesURL) {(data, response, error) in
             if let urlError = error as? URLError {
@@ -28,9 +28,16 @@ class APIService :  NSObject {
 
             if let data = data {
                 let jsonDecoder = JSONDecoder()
-                let cityWeatherData = try! jsonDecoder.decode(Cities.self, from: data)
-                print(cityWeatherData)
-                completion(.success(cityWeatherData))
+                do {
+                    let cityWeatherData = try jsonDecoder.decode(Cities.self, from: data)
+                    print(cityWeatherData)
+                    completion(.success(cityWeatherData))
+                }
+                catch {
+                    //added dummy code if service failed due to some reason
+                    let error = NSError(domain:"", code:401, userInfo:[ NSLocalizedDescriptionKey: "Error Occured"])
+                    completion(.failure(error))
+                }
             }
         }.resume()
     }
